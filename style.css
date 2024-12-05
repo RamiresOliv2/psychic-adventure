@@ -4,6 +4,10 @@ body {
     color: wheat;
     text-align: center;
 }
+
+div {
+    flex: content;
+}
 img { 
     height: 300px;
     width: 400px;

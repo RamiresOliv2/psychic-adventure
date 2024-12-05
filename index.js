@@ -1,5 +1,8 @@
 const a = [
-    "https://www.youtube.com/embed/YjQVS3CmtVg?si=lFy5LxbdyNhbUP8p"
+    ["Minecraft : O MELHOR MAPA DE POLÍCIA E LADRÃO !!","https://www.youtube.com/embed/YjQVS3CmtVg?si=lFy5LxbdyNhbUP8p"],
+    ["heisnburger insano","https://www.youtube.com/embed/b4XpMTUlorc?si=icds2g4oB9RbZoiQ"],
+    ["AUS OPEN 2015 - Djokovic v Abrams Semi-Final","https://www.youtube.com/embed/kn271kr_ks0?si=L9s3RU4JxunyZf8R"],
+    ["seu carro é seguro de um caça super manobravel de defesa aéria?","https://www.youtube.com/embed/k7YVxLLIuGM?si=DQf5LlR2hE236F_u"],
 ]
 
 window.onload = () => {
@@ -27,7 +30,10 @@ window.onload = () => {
         .catch(error => console.log('error', error));        
 
     for (const i in a) {
-        const url = a[i];
-        videosDiv.innerHTML = videosDiv.innerHTML + `<iframe width="560" height="315" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+        const item = a[i];
+        videosDiv.innerHTML = videosDiv.innerHTML + `<div>`
+        videosDiv.innerHTML = videosDiv.innerHTML + `<h1>${item[0]}</h1>`
+        videosDiv.innerHTML = videosDiv.innerHTML + `<iframe width="560" height="315" src="${item[1]}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+        videosDiv.innerHTML = videosDiv.innerHTML + `</div>`
     }
 }
